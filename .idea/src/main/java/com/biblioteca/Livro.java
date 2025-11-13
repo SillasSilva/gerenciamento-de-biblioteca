@@ -7,7 +7,7 @@ public class Livro {
     private int totalDeCopias;
     private int totalEmprestado;
 
-    public void Livro(String titulo, String autor,String identificador, int totalDeCopias) {
+    public Livro(String titulo, String autor,String identificador, int totalDeCopias) {
         this.titulo = titulo;
         this.autor = autor;
         this.identificador = identificador;
