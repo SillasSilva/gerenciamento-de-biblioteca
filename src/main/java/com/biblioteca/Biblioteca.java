@@ -38,4 +38,23 @@ public class Biblioteca {
         }
         System.out.println("---------------------------\n");
     }
+
+    public boolean devolverItem(String titulo) {
+        ItemBiblioteca item = buscarItemPorTitulo(titulo);
+        if (item == null) {
+            System.out.println("Erro! " + titulo + "não existe em nossa biblioteca");
+            return false;
+        }
+        if (item instanceof Livro livro) {
+            if (livro.devolver()) {
+                System.out.println(livro.getTitulo() + "devolvido com sucesso!");
+                return true;
+            } else {
+                System.out.println("Erro, o livro " + livro.getTitulo() + "não pode ser devolvido");
+                return  false;
+            }
+        }
+
+        return false;
+    }
 }
