@@ -23,7 +23,7 @@ public class Biblioteca {
         for (ItemBiblioteca item : this.itens) {
             // Usa .equalsIgnoreCase() para buscar sem distinção de maiúsculas/minúsculas
             if (item.getTitulo().equalsIgnoreCase(titulo)) {
-                return item; // Encontrado!
+                return item;// Encontrado!
             }
         }
         return null; // Não encontrado

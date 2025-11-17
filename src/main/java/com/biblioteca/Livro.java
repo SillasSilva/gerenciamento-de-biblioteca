@@ -4,18 +4,13 @@ package com.biblioteca;
 public class Livro extends ItemBiblioteca {
     // Atributos EXCLUSIVOS de Livro
     private String autor;
-    private int totalDeCopias;
-    private int totalEmprestado;
 
     // Construtor: recebe todos os dados, e usa super() para inicializar os herdados.
     public Livro(String titulo, String identificador, String autor, int totalDeCopias) {
-        // Chama o construtor da classe pai (ItemBiblioteca)
-        super(titulo, identificador);
 
-        // Inicializa os atributos próprios de Livro
+        super(titulo, identificador, totalDeCopias);
         this.autor = autor;
-        this.totalDeCopias = totalDeCopias;
-        this.totalEmprestado = 0; // Um livro novo começa com 0 emprestado
+        totalEmprestado = 0; // Um livro novo começa com 0 emprestado
     }
 
     // IMPLEMENTAÇÃO DO POLIMORFISMO: Define a regra do Livro

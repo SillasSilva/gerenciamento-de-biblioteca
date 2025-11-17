@@ -2,11 +2,28 @@ package com.biblioteca;
 
 public class main {
     public static void main (String[] args) {
-        Livro l1 = new Livro("pai rico e pai pobre", "robert", "wwee", 10);
+        Biblioteca minhaBiblioteca = new Biblioteca();
 
-        System.out.println("tinhamos em estoque" + l1.getCopiasDisponiveis() + " do livro: " + l1.getTitulo());
-        l1.emprestar();
-        System.out.println("mas agora temos apenas: " + l1.getCopiasDisponiveis() + "porque pegaram: " + l1.getTotalEmprestado());
+        Livro livro1 = new Livro("Cachorro com dó", "22ERERE", "Malrinelson", 10);
+        Livro livro2 = new Livro("gato com dó", "2323EE", "BRAGOX", 10);
+        Revista revista1 = new Revista("Blaxter", "BLEIBLRIDE", 9);
+        Revista revista2 = new Revista("gralex", "sdfs", 8);
+
+
+        minhaBiblioteca.adicionarItem(livro1);
+        minhaBiblioteca.adicionarItem(livro2);
+        minhaBiblioteca.adicionarItem(revista1);
+        minhaBiblioteca.adicionarItem(revista2);
+
+        minhaBiblioteca.buscarItemPorTitulo("Blaxter");
+
+
+        minhaBiblioteca.listarPrazosDevolucao();
+
+
+
+
+
     }
 
 }

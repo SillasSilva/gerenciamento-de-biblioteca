@@ -5,8 +5,7 @@ public class Revista extends ItemBiblioteca {
     private int edicao;
 
     public Revista (String titulo, String identificador, int edicao) {
-        super(titulo, identificador);
-        this.edicao = edicao;
+        super(titulo, identificador, edicao);
     }
 
     public int calcularPrazoDevolucaoDias(){
@@ -15,4 +14,5 @@ public class Revista extends ItemBiblioteca {
     public int getEdicao(){
         return edicao;
     }
+
 }
